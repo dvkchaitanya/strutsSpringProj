@@ -1,0 +1,1 @@
+StrutsSpringProj is created with struts2 as frontend mvc, spring framework is used as middle layer and spring jdbc is used to communicate with database.

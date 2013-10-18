@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.24-log" jdbc-version="3.0" driver-version="mysql-connector-java-5.1.9 ( Revision: ${svn.Revision} )" uuid="434be761-a3c0-4825-b137-aa66305835d1">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/twitDatabase</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfcedfcfdfd9dfdfdf9bdf98df99</user-password>
+    <schema-pattern>twitdatabase.*</schema-pattern>
+    <default-dialect>MySQL</default-dialect>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.9.jar!/</url>
+      </library>
+    </libraries>
+    <table name="tweeets" schema="" catalog="twitdatabase" type="TABLE">
+      <column name="tweetId" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="tweet" sqlType="VARCHAR" length="140" precision="0" nullable="true" jdbcType="12" />
+    </table>
+    <table name="user" schema="" catalog="twitdatabase" type="TABLE">
+      <column name="userId" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="userName" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" />
+    </table>
+  </data-source>
+</component>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+        "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.action.extension" value=""/>
+    <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+    <package name="default" namespace="/" extends="struts-default">
+
+<!--		<action name="debugTagAction"
+			class="com.koushik.javabrains.action.DebugTagAction >
+			<result name="success">pages/debug.jsp</result>
+		</action>-->
+
+	</package>
+    <package name="struts2Tweet" namespace="/tweet" extends="struts-default">
+         <interceptors>
+            <interceptor name="redirectMessage"
+                         class="my.struts.interceptor.RedirectMessageInterceptor" />
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="redirectMessage" />
+                <interceptor-ref name="paramsPrepareParamsStack" />
+            </interceptor-stack>
+         </interceptors>
+         <default-interceptor-ref name="myStack" />
+
+        <action name="index" class="com.koushik.javabrains.action.TweetController" method="index">
+            <!--<exception-mapping exception="java.lang.NullPointerException" result="error"/>-->
+            <result name="success">/tweet/index.jsp</result>
+            <!--<result name="error">/tweet/error.jsp</result>-->
+        </action>
+
+        <action name="create">
+            <result>/tweet/create.jsp</result>
+        </action>
+
+         <action name="insert" class="com.koushik.javabrains.action.TweetController" method="insert">
+             <result name="success" type="redirectAction">index</result>
+             <result name="input">/tweet/create.jsp</result>
+        </action>
+
+        <action name="update">
+            <result>/tweet/update.jsp</result>
+        </action>
+
+<!--    <action name="processCreate">
+            <result></result>
+        </action>-->
+
+        <action name="processUpdate" class="com.koushik.javabrains.action.TweetController" method="update">
+            <result name="success" type="redirectAction">index</result>
+            <result name="input" >/tweet/update.jsp</result>
+        </action>
+
+        <action name="delete" class="com.koushik.javabrains.action.TweetController" method="delete" >
+            <result name="success" type="redirectAction">index</result>
+        </action>
+
+    </package>
+
+</struts>

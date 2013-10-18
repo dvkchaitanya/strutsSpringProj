@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="strutsSpringProj:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/strutsSpringProj_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="strutsSpringProj/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="strutsSpringProj" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="struts2-2.2.3.1-2.2.3.1" />
+          <element id="library" level="project" name="spring-3.2.4" />
+          <element id="library" level="project" name="org.springframework:spring-web:3.2.4.RELEASE" />
+          <element id="library" level="project" name="log4j:log4j:1.2.9" />
+          <element id="library" level="project" name="org.apache.struts:struts2-spring-plugin:2.1.6" />
+          <element id="library" level="project" name="mysql:mysql-connector-java:5.1.9" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
