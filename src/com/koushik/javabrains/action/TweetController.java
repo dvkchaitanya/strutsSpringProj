@@ -1,27 +1,35 @@
 package com.koushik.javabrains.action;
 
+import com.koushik.javabrains.entity.TweetEntity;
 import com.koushik.javabrains.model.TweetModel;
 import com.koushik.javabrains.service.TweetService;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import org.apache.log4j.Logger;
 import org.apache.struts2.interceptor.SessionAware;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
 import java.util.Map;
 
+
+@Controller
 public class TweetController extends ActionSupport implements ModelDriven{
 
-    Logger logger = Logger.getLogger(TweetController.class);
+    private static final Logger logger = Logger.getLogger(TweetController.class);
     private TweetService tweetService;
     private List<TweetModel> tweetModels;
     private TweetModel tweetModel = new TweetModel();
     private Map session;
+    private List<TweetEntity> tweetEntities;
+
     public void setTweetModel(TweetModel tweetModel) {
         this.tweetModel = tweetModel;
     }
 
-    public TweetModel getTweetModel() {
+    TweetModel getTweetModel() {
         return tweetModel;
     }
 
@@ -30,9 +38,9 @@ public class TweetController extends ActionSupport implements ModelDriven{
         return tweetModel;
     }
 
-    /*public void setModel(TweetModel tweetModel){
+    public void setModel(TweetModel tweetModel){
         this.tweetModel = tweetModel;
-    }*/
+    }
     public List<TweetModel> getTweetModels() {
         return tweetModels;
     }
@@ -41,15 +49,26 @@ public class TweetController extends ActionSupport implements ModelDriven{
         this.tweetModels = tweetModels;
     }
 
-    public TweetService getTweetService() {
+    TweetService getTweetService() {
         return tweetService;
     }
 
+    @Autowired
     public void setTweetService(TweetService tweetService) {
         this.tweetService = tweetService;
     }
    public String index() throws Exception {
-        setTweetModels(tweetService.showAllTweets());;
+//        setTweetModels(tweetService.showAllTweets());
+       setTweetEntities(tweetService.showAllTweets());
+       logger.debug("In index method back");
+//       for(TweetEntity tweetEntity : tweetEntities ){
+       for (TweetEntity tweetEntity : tweetEntities) {
+               logger.debug(tweetEntity.toString());
+                logger.debug(tweetEntity.getTweet());
+                logger.debug(tweetEntity.getTweetId());
+                logger.debug("In for loop");
+            }
+//       }
         return SUCCESS;
     }
 
@@ -58,7 +77,7 @@ public class TweetController extends ActionSupport implements ModelDriven{
     }
 
      public String insert(){
-         logger.debug("insert() method called");
+         logger.info("insert() method called");
         getTweetService().insert(tweetModel);
         return SUCCESS;
     }
@@ -73,6 +92,9 @@ public class TweetController extends ActionSupport implements ModelDriven{
     }
 
     public String delete(){
+        logger.info("In TweetController delete method");
+        logger.info(tweetModel.getTweet());
+        logger.info(tweetModel.getTweetId());
         getTweetService().delete(tweetModel);
         return SUCCESS;
     }
@@ -95,4 +117,12 @@ public class TweetController extends ActionSupport implements ModelDriven{
     public void setSession(Map<String, Object> stringObjectMap) {
         stringObjectMap
     }*/
+
+    public void setTweetEntities(List<TweetEntity> tweetEntities) {
+        this.tweetEntities = tweetEntities;
+    }
+
+    public List<TweetEntity> getTweetEntities() {
+        return tweetEntities;
+    }
 }

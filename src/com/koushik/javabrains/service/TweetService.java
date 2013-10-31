@@ -1,6 +1,7 @@
 package com.koushik.javabrains.service;
 
 import com.koushik.javabrains.dao.TweetDao;
+import com.koushik.javabrains.entity.TweetEntity;
 import com.koushik.javabrains.model.TweetModel;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public interface TweetService {
 
     void insert(TweetModel tweetModel);
 
-    List<TweetModel> showAllTweets() throws Exception;
+    List<TweetEntity> showAllTweets();
 
     void delete(TweetModel tweetModel);
 

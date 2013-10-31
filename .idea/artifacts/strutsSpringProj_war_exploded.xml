@@ -8,12 +8,25 @@
           <element id="module-output" name="strutsSpringProj" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="struts2-2.2.3.1-2.2.3.1" />
-          <element id="library" level="project" name="spring-3.2.4" />
-          <element id="library" level="project" name="org.springframework:spring-web:3.2.4.RELEASE" />
           <element id="library" level="project" name="log4j:log4j:1.2.9" />
-          <element id="library" level="project" name="org.apache.struts:struts2-spring-plugin:2.1.6" />
-          <element id="library" level="project" name="mysql:mysql-connector-java:5.1.9" />
+          <element id="library" level="project" name="junit:junit:3.8.1" />
+          <element id="library" level="project" name="mysql:mysql-connector-java:5.1.8" />
+          <element id="library" level="project" name="org.springframework:spring-tx:3.2.2.RELEASE" />
+          <element id="library" level="project" name="jstl:jstl:1.2" />
+          <element id="library" level="project" name="org.hibernate:hibernate-annotations:3.2.1.ga" />
+          <element id="library" level="project" name="dom4j:dom4j:1.6.1" />
+          <element id="library" level="project" name="commons-logging:commons-logging:1.1.1" />
+          <element id="library" level="project" name="commons-collections:commons-collections:3.2.1" />
+          <element id="library" level="project" name="antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="org.springframework:spring-jdbc:3.2.2.RELEASE" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/log4j-1.2.9.jar" />
+          <element id="library" level="project" name="org.springframework:spring-orm:3.2.2.RELEASE" />
+          <element id="library" level="project" name="org.springframework:spring-context:3.2.2.RELEASE" />
+          <element id="library" level="project" name="org.apache.struts:struts2-spring-plugin:2.2.1" />
+          <element id="library" level="project" name="cglib:cglib-nodep:2.2" />
+          <element id="library" level="project" name="org.antlr:antlr:3.0.1" />
+          <element id="library" level="project" name="asm:asm-commons:2.2.3" />
+          <element id="library" level="project" name="asm:asm:2.2.3" />
         </element>
       </element>
     </root>

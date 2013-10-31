@@ -1,5 +1,6 @@
 package com.koushik.javabrains.dao;
 
+import com.koushik.javabrains.entity.TweetEntity;
 import com.koushik.javabrains.model.TweetModel;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -13,15 +14,15 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface TweetDao {
-    JdbcTemplate getJdbcTemplate();
+/*    JdbcTemplate getJdbcTemplate();
 
-    void setJdbcTemplate(JdbcTemplate jdbcTemplate);
+    void setJdbcTemplate(JdbcTemplate jdbcTemplate);*/
 
     void insert(TweetModel tweetModel);
 
-    List<TweetModel> listTweets();
+    List listTweets();
 
     void deleteTweet(TweetModel tweetModel);
 
-    void updateTweet(TweetModel tweetModel);
+    void updateTweet(TweetEntity tweetModel);
 }

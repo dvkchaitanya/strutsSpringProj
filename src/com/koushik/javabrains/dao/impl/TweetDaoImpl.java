@@ -1,13 +1,16 @@
 package com.koushik.javabrains.dao.impl;
 
 import com.koushik.javabrains.dao.TweetDao;
+import com.koushik.javabrains.entity.TweetEntity;
 import com.koushik.javabrains.model.TweetModel;
 import org.apache.log4j.Logger;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.hibernate.SessionFactory;
+import org.hibernate.classic.Session;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+//import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,61 +19,72 @@ import java.util.Map;
  * Time: 4:44 PM
  * To change this template use File | Settings | File Templates.
  */
-public class TweetDaoImpl implements TweetDao {
-     JdbcTemplate jdbcTemplate;
+@Repository("tweetDao")
+//@Transactional
+public class TweetDaoImpl implements TweetDao{
+//    @Autowired
+//    private HibernateTemplate hibernateTemplate;
+//    @Autowired
+//    private TweetEntity tweetEntity;
+    private SessionFactory sessionFactory;
     private static final Logger logger = Logger.getLogger(TweetDaoImpl.class);
-    List<Map<String, Object>> tweetModelList;
+    @Autowired
+    public void setSessionFactory(SessionFactory sessionFactory) {
+//        this.sessionFactory = sessionFactory;
+        logger.debug("In setSessionFactory method");
+//        hibernateTemplate =new HibernateTemplate(sessionFactory);
+        this.sessionFactory = sessionFactory;
 
-    @Override
-    public JdbcTemplate getJdbcTemplate() {
-        return jdbcTemplate;
+    }
+
+    public Session getCurrentSession(){
+        return sessionFactory.getCurrentSession();
     }
 
     @Override
-    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
+    public void insert(TweetModel tweetModel) {
+/*        tweetModel.getTweet();
+        hibernateTemplate.save(tweetModel);*/
+        TweetEntity tweetEntity = new TweetEntity();
+        tweetEntity.setTweetId(tweetModel.getTweetId());
+        tweetEntity.setTweet(tweetModel.getTweet());
+        logger.info(tweetEntity.toString() + "sexy shakeela");
+        getCurrentSession().save(tweetEntity);
     }
 
     @Override
-    public void insert(TweetModel tweetModel){
-        logger.debug("In insert method of tweetDaoImpl class");
-        logger.debug(tweetModel.getTweet());
-        getJdbcTemplate().update("insert into tweeets (tweetId, tweet) values (?,?)",
-                             new Object[]{tweetModel.getTweetId(),tweetModel.getTweet()} );
+    @SuppressWarnings("unchecked")
+    public List<TweetEntity> listTweets() {
+        logger.debug("sexy too");
+        return (List<TweetEntity>) getCurrentSession().createQuery("from  tweetEntity").list();
+    }
+    
+    @Override
+//    @Transactional(readOnly = false)
+    public void deleteTweet(TweetModel tweetModel ) {
+
+//        Object tweetEntity = hibernateTemplate.load(TweetEntity.class,tweetModel.getTweetId());
+/*        Object tweetEntity = hibernateTemplate.get(TweetEntity.class,tweetModel.getTweetId());
+        hibernateTemplate.delete(tweetEntity);*/
+
+        TweetEntity tweetEntity= (TweetEntity)getCurrentSession().get(TweetEntity.class,tweetModel.getTweetId());
+        logger.info(tweetModel.getTweetId());
+
+        logger.info("executing deleteTweet method");
+        logger.info(tweetEntity);
+        logger.info(tweetEntity.getTweet());
+        logger.info(tweetEntity.getTweetId());
+        logger.info("hello");
+        getCurrentSession().delete(tweetEntity);
     }
 
     @Override
-    public List<TweetModel> listTweets(){
-        String sql ="select * from tweeets";
-        logger.debug("sexy hi");
-/*        List <TweetModel> tweetModels = new ArrayList<TweetModel>();
-        List <Map<String, Object>> rows =  getJdbcTemplate().queryForList(sql,new TweetRowMapper());
-        for (Map row : rows) {
-            row.get("tweetId");
-            TweetModel tm = new TweetModel();
-            tm.setTweetId((Integer)row.get("tweetId"));
-            tm.setTweet((String)row.get("tweet"));
-            tweetModels.add(tm);
-        }
-        return  tweetModels;*/
-        List<TweetModel> tweetModels = getJdbcTemplate().query(sql,new BeanPropertyRowMapper(TweetModel.class));
-        return tweetModels;
+//    @Transactional(readOnly = false)
+    public void updateTweet(TweetEntity tweetEntity) {
+        //To change body of implemented methods use File | Settings | File Templates.
+//        hibernateTemplate.update(tweetModel);
+        getCurrentSession().update(tweetEntity);
     }
 
-    @Override
-    public void deleteTweet(TweetModel tweetModel) {
-        int tweetId = tweetModel.getTweetId();
-        String sql = "delete from tweeets where tweetId ="+tweetId;
-        getJdbcTemplate().update(sql);
-    }
 
-    @Override
-    public void updateTweet(TweetModel tweetModel) {
-        String tweet = tweetModel.getTweet();
-        int tweetId = tweetModel.getTweetId();
-        String sql = "update tweeets set tweet='"+tweet+"' where tweetId="+tweetId;
-        logger.debug("obama");
-        logger.debug(sql);
-        getJdbcTemplate().update(sql);
-    }
 }

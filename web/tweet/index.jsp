@@ -20,13 +20,20 @@
     <s:url action="create" id="createTweetId" var="createTweetId" namespace="/tweet"/>
 --%>
 <table>
-    <s:iterator var="tweetModel" value="tweetModels">
+    <%--<s:iterator var="tweetModel" value="tweetModels">--%>
+        <s:iterator var="tweetEntity" value="tweetEntities">
         <tbody>
-             <td><s:property value="tweetId"></s:property></td>
-            <td><s:property value="tweet"></s:property></td>
+             <td><s:property value="tweetId"/></td>
+            <td><s:property value="tweet"/></td>
             <%--<td><a href="<s:url var="%{updateTweet}"/>">update</a></td>--%>
-            <td><s:a action="update?tweetId=%{#tweetModel.tweetId}">update</s:a></td>
-            <td><s:a action="delete?tweetId=%{#tweetModel.tweetId}">delete</s:a></td>
+            <td><s:a action="update?tweetId=%{#tweetEntity.tweetId}">update</s:a></td>
+             <td><s:url id ="delete" action="delete">
+                 <s:param name="tweetId" value="tweetId"></s:param>
+             </s:url> 
+            <s:a href="%{delete}">delete</s:a>
+             </td>
+             <%--<td><s:url action="delete"><s:param value= <s:property value="tweetId">>delete</s:url></td>--%>
+              <%--<td><s:a action="delete?tweetId=%{tweetId}">delete</s:a></td>--%>
         </tbody>
 <%--        <td><a href="<s:property value="#updateTweet"/>">update</a></td>
         <td><a href="<s:property value="#deleteTweet"/>">delete</a></td>--%>

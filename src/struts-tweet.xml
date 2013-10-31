@@ -27,9 +27,7 @@
          <default-interceptor-ref name="myStack" />
 
         <action name="index" class="com.koushik.javabrains.action.TweetController" method="index">
-            <!--<exception-mapping exception="java.lang.NullPointerException" result="error"/>-->
             <result name="success">/tweet/index.jsp</result>
-            <!--<result name="error">/tweet/error.jsp</result>-->
         </action>
 
         <action name="create">
@@ -44,10 +42,6 @@
         <action name="update">
             <result>/tweet/update.jsp</result>
         </action>
-
-<!--    <action name="processCreate">
-            <result></result>
-        </action>-->
 
         <action name="processUpdate" class="com.koushik.javabrains.action.TweetController" method="update">
             <result name="success" type="redirectAction">index</result>

@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * Time: 1:45 AM
  * To change this template use File | Settings | File Templates.
  */
-public class TweetRowMapper implements RowMapper {
+class TweetRowMapper implements RowMapper {
     private static final Logger logger = Logger.getLogger(TweetRowMapper.class);
     @Override
     public Object mapRow(ResultSet resultSet, int i) throws SQLException {
