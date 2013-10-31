@@ -22,7 +22,6 @@ public class TweetEntity
 {
     @Id
     @Column(name = "tweetId")
-    @GeneratedValue(strategy = GenerationType.AUTO )
     private int tweetId;
 
     @Column(name = "tweet")

@@ -1,2 +1,101 @@
 
 2013-10-30 23:04:40 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
+2013-10-31 00:09:26 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts-default.xml]
+2013-10-31 00:09:27 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts-plugin.xml]
+2013-10-31 00:09:27 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts.xml]
+2013-10-31 00:09:27 INFO  DefaultConfiguration:31 - Overriding property struts.i18n.reload - old value: false new value: true
+2013-10-31 00:09:27 INFO  DefaultConfiguration:31 - Overriding property struts.configuration.xml.reload - old value: false new value: true
+2013-10-31 00:09:27 INFO  StrutsSpringObjectFactory:31 - Initializing Struts-Spring integration...
+2013-10-31 00:09:27 INFO  SpringObjectFactory:31 - Setting autowire strategy to name
+2013-10-31 00:09:27 INFO  StrutsSpringObjectFactory:31 - ... initialized Struts-Spring integration successfully
+2013-10-31 00:09:33 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
+2013-10-31 00:09:39 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
+2013-10-31 00:09:53 INFO  TweetController:80 - insert() method called
+2013-10-31 00:09:53 INFO  TweetDaoImpl:51 - com.koushik.javabrains.entity.TweetEntity@130fdfdsexy shakeela
+2013-10-31 00:09:53 WARN  JDBCExceptionReporter:77 - SQL Error: 1109, SQLState: 42S02
+2013-10-31 00:09:53 ERROR JDBCExceptionReporter:78 - Unknown table 'hibernate_sequence' in field list
+2013-10-31 00:09:53 ERROR runtime:96 - 
+Method public java.lang.String org.hibernate.exception.NestableRuntimeException.getMessage(int) threw an exception when invoked on org.hibernate.exception.SQLGrammarException: could not get next sequence value
+The problematic instruction:
+----------
+==> ${msg[0]} [on line 68, column 29 in org/apache/struts2/dispatcher/error.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.template.TemplateModelException: Method public java.lang.String org.hibernate.exception.NestableRuntimeException.getMessage(int) threw an exception when invoked on org.hibernate.exception.SQLGrammarException: could not get next sequence value
+	at freemarker.ext.beans.SimpleMethodModel.exec(SimpleMethodModel.java:130)
+	at freemarker.ext.beans.SimpleMethodModel.get(SimpleMethodModel.java:138)
+	at freemarker.core.DynamicKeyName.dealWithNumericalKey(DynamicKeyName.java:111)
+	at freemarker.core.DynamicKeyName._getAsTemplateModel(DynamicKeyName.java:90)
+	at freemarker.core.Expression.getAsTemplateModel(Expression.java:89)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:209)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:209)
+	at freemarker.core.IfBlock.accept(IfBlock.java:82)
+	at freemarker.core.Environment.visit(Environment.java:209)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:416)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:209)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:209)
+	at freemarker.core.IfBlock.accept(IfBlock.java:82)
+	at freemarker.core.Environment.visit(Environment.java:209)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:209)
+	at freemarker.core.Environment.process(Environment.java:189)
+	at freemarker.template.Template.process(Template.java:237)
+	at org.apache.struts2.dispatcher.Dispatcher.sendError(Dispatcher.java:748)
+	at org.apache.struts2.dispatcher.Dispatcher.serviceAction(Dispatcher.java:505)
+	at org.apache.struts2.dispatcher.ng.ExecuteOperations.executeAction(ExecuteOperations.java:77)
+	at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.doFilter(StrutsPrepareAndExecuteFilter.java:91)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:256)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:217)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:279)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardPipeline.doInvoke(StandardPipeline.java:655)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:595)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:161)
+	at org.apache.catalina.connector.CoyoteAdapter.doService(CoyoteAdapter.java:331)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:231)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$AdapterCallable.call(ContainerMapper.java:317)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:195)
+	at com.sun.grizzly.http.ProcessorTask.invokeAdapter(ProcessorTask.java:860)
+	at com.sun.grizzly.http.ProcessorTask.doProcess(ProcessorTask.java:757)
+	at com.sun.grizzly.http.ProcessorTask.process(ProcessorTask.java:1056)
+	at com.sun.grizzly.http.DefaultProtocolFilter.execute(DefaultProtocolFilter.java:229)
+	at com.sun.grizzly.DefaultProtocolChain.executeProtocolFilter(DefaultProtocolChain.java:137)
+	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:104)
+	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:90)
+	at com.sun.grizzly.http.HttpProtocolChain.execute(HttpProtocolChain.java:79)
+	at com.sun.grizzly.ProtocolChainContextTask.doCall(ProtocolChainContextTask.java:54)
+	at com.sun.grizzly.SelectionKeyContextTask.call(SelectionKeyContextTask.java:59)
+	at com.sun.grizzly.ContextTask.run(ContextTask.java:71)
+	at com.sun.grizzly.util.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:532)
+	at com.sun.grizzly.util.AbstractThreadPool$Worker.run(AbstractThreadPool.java:513)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.NullPointerException
+	at freemarker.ext.beans.SimpleMemberModel.unwrapArguments(SimpleMemberModel.java:85)
+	at freemarker.ext.beans.SimpleMethodModel.exec(SimpleMethodModel.java:106)
+	... 52 more
+2013-10-31 00:12:11 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts-default.xml]
+2013-10-31 00:12:12 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts-plugin.xml]
+2013-10-31 00:12:12 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts.xml]
+2013-10-31 00:12:12 INFO  DefaultConfiguration:31 - Overriding property struts.i18n.reload - old value: false new value: true
+2013-10-31 00:12:12 INFO  DefaultConfiguration:31 - Overriding property struts.configuration.xml.reload - old value: false new value: true
+2013-10-31 00:12:13 INFO  StrutsSpringObjectFactory:31 - Initializing Struts-Spring integration...
+2013-10-31 00:12:13 INFO  SpringObjectFactory:31 - Setting autowire strategy to name
+2013-10-31 00:12:13 INFO  StrutsSpringObjectFactory:31 - ... initialized Struts-Spring integration successfully
+2013-10-31 00:12:32 INFO  TweetController:80 - insert() method called
+2013-10-31 00:12:33 INFO  TweetDaoImpl:51 - com.koushik.javabrains.entity.TweetEntity@135dd2sexy shakeela
+2013-10-31 00:12:33 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
+2013-10-31 00:12:54 INFO  TweetController:80 - insert() method called
+2013-10-31 00:12:54 INFO  TweetDaoImpl:51 - com.koushik.javabrains.entity.TweetEntity@1d164efsexy shakeela
+2013-10-31 00:12:54 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
+2013-10-31 00:13:08 INFO  TweetController:80 - insert() method called
+2013-10-31 00:13:08 INFO  TweetDaoImpl:51 - com.koushik.javabrains.entity.TweetEntity@12e8f81sexy shakeela
+2013-10-31 00:13:09 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
+2013-10-31 00:13:21 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
