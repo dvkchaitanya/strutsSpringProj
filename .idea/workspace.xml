@@ -76,7 +76,7 @@
       <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/tweet/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="27" selection-start="891" selection-end="891" vertical-scroll-proportion="1.2207792">
+            <state line="38" column="6" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.66883117">
               <folding />
             </state>
           </provider>
@@ -163,10 +163,10 @@
         <option value="$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/TweetDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/com/koushik/javabrains/service/impl/TweetServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/koushik/javabrains/action/TweetController.java" />
-        <option value="$PROJECT_DIR$/web/tweet/index.jsp" />
         <option value="$PROJECT_DIR$/logFile.1" />
         <option value="$PROJECT_DIR$/logFile" />
         <option value="/Data Source2" />
+        <option value="$PROJECT_DIR$/web/tweet/index.jsp" />
       </list>
     </option>
   </component>
@@ -793,7 +793,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/tweet/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="27" selection-start="891" selection-end="891" vertical-scroll-proportion="1.2207792">
+        <state line="38" column="6" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.66883117">
           <folding />
         </state>
       </provider>
