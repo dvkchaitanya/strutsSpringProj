@@ -25,7 +25,7 @@ public class UserEntity implements Serializable {
     @Column(name = "userName")
     private String userName;
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy = "userEntity")
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "userEntity",cascade = CascadeType.ALL)
     private Set<TweetEntity> tweetEntitiySet = new HashSet<TweetEntity>(0);
 
     public int getUserId() {

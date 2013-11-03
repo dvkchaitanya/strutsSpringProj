@@ -62,71 +62,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TweetController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/action/TweetController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="0" selection-start="2208" selection-end="2208" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/action/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserEntity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/entity/UserEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="45" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logFile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logFile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="10" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TweetServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/service/impl/TweetServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="33" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TweetDaoImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/TweetDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="38" selection-start="1950" selection-end="1950" vertical-scroll-proportion="0.0">
+            <state line="18" column="45" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#2083#2113#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#UserEntity#0" expanded="false" />
+                <element signature="e#874#887#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="9" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -134,7 +78,7 @@
       <file leaf-file-name="TweetEntity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/entity/TweetEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0">
+            <state line="31" column="36" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#TweetEntity#0" expanded="false" />
@@ -147,19 +91,82 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TweetModel.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/model/TweetModel.java">
+      <file leaf-file-name="logFile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logFile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="659" selection-end="659" vertical-scroll-proportion="0.56573707">
+            <state line="1379" column="39" selection-start="120528" selection-end="120528" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Integer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_21/src.zip!/java/lang/Integer.java">
+      <file leaf-file-name="UserDaoImpl.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/UserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="525" column="22" selection-start="19320" selection-end="19320" vertical-scroll-proportion="0.0">
+            <state line="30" column="4" selection-start="962" selection-end="962" vertical-scroll-proportion="-0.74496645">
+              <folding>
+                <element signature="docComment;class#UserDaoImpl#0" expanded="false" />
+                <element signature="e#1354#1384#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TweetDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/TweetDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="15" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TweetServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/service/impl/TweetServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="docComment;class#TweetServiceImpl#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/action/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="35" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TweetController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/action/TweetController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="136" column="4" selection-start="3718" selection-end="3718" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TweetModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/model/TweetModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="48" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -175,22 +182,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/user/index.jsp" />
         <option value="$PROJECT_DIR$/web/user/create.jsp" />
         <option value="/Data Source2" />
-        <option value="$PROJECT_DIR$/src/com/koushik/javabrains/entity/TweetEntity.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/spring-config.xml" />
         <option value="$PROJECT_DIR$/web/tweet/index.jsp" />
         <option value="$PROJECT_DIR$/src/struts-tweet.xml" />
         <option value="$PROJECT_DIR$/web/tweet/create.jsp" />
         <option value="$PROJECT_DIR$/src/com/koushik/javabrains/action/TweetController.java" />
         <option value="$PROJECT_DIR$/src/com/koushik/javabrains/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/TweetDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/koushik/javabrains/entity/UserEntity.java" />
         <option value="$PROJECT_DIR$/src/com/koushik/javabrains/action/UserController.java" />
-        <option value="$PROJECT_DIR$/logFile" />
         <option value="$PROJECT_DIR$/src/com/koushik/javabrains/model/TweetModel.java" />
+        <option value="$PROJECT_DIR$/src/com/koushik/javabrains/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/koushik/javabrains/entity/TweetEntity.java" />
+        <option value="$PROJECT_DIR$/logFile" />
+        <option value="$PROJECT_DIR$/src/com/koushik/javabrains/entity/UserEntity.java" />
+        <option value="$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/UserDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -841,8 +848,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14021571" sideWeight="0.7195767" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47795415" sideWeight="0.0" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20107858" sideWeight="0.60493827" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39506173" sideWeight="0.0" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39506173" sideWeight="0.49691835" order="13" side_tool="false" content_ui="tabs" />
@@ -941,23 +948,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/UserDaoImpl.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_21/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="24" selection-start="2925" selection-end="2925" vertical-scroll-proportion="0.0">
+        <state line="525" column="22" selection-start="19320" selection-end="19320" vertical-scroll-proportion="0.20802005">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/action/TweetController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="4" selection-start="3718" selection-end="3718" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/model/TweetModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="48" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/action/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="35" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="9" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/TweetDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="15" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/service/impl/TweetServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="docComment;class#TweetServiceImpl#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/entity/TweetEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0">
+        <state line="31" column="36" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#TweetEntity#0" expanded="false" />
@@ -969,65 +1017,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/TweetDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/logFile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="38" selection-start="1950" selection-end="1950" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2083#2113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/service/impl/TweetServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="33" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.0">
+        <state line="1379" column="39" selection-start="120528" selection-end="120528" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/action/TweetController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="0" selection-start="2208" selection-end="2208" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/entity/UserEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="45" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/action/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
+        <state line="18" column="45" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#UserEntity#0" expanded="false" />
+            <element signature="e#874#887#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_21/src.zip!/java/lang/Integer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="525" column="22" selection-start="19320" selection-end="19320" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logFile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="10" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/model/TweetModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="659" selection-end="659" vertical-scroll-proportion="0.56573707">
-          <folding />
+        <state line="30" column="4" selection-start="962" selection-end="962" vertical-scroll-proportion="-0.74496645">
+          <folding>
+            <element signature="docComment;class#UserDaoImpl#0" expanded="false" />
+            <element signature="e#1354#1384#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

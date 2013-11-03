@@ -1,6 +1,7 @@
 package com.koushik.javabrains.service.impl;
 
 import com.koushik.javabrains.dao.UserDao;
+import com.koushik.javabrains.entity.TweetEntity;
 import com.koushik.javabrains.entity.UserEntity;
 import com.koushik.javabrains.model.UserModel;
 import com.koushik.javabrains.service.UserService;
@@ -38,26 +39,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-//    @Transactional
+    @Transactional
     public void insert(UserModel userModel){
         getUserDao().insert(userModel);
     }
 
     @Override
-//    @Transactional
+    @Transactional
     public List<UserEntity> showAllUsers() {
-          logger.info("In service class  showAllUsers sexy");
         List<UserEntity> userEntityList = null;
         try{
-//              userModelList= getUserDao().listUsers();
                 userEntityList = getUserDao().listUsers();
-/*            logger.debug("after method called from service class");
-                for (UserEntity userEntity : userEntityList) {
-                   logger.debug(userEntity.toString());
-                    logger.debug(userEntity.getUser());
-                    logger.debug(userEntity.getUserId());
-                    logger.debug("In for loop");
-                }*/
         }
         catch (Exception e){
             logger.debug(e);
@@ -68,12 +60,11 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public void delete(UserModel userModel) {
-        logger.info("in delete method of UserServiceImpl "+userModel.getUserId());
         getUserDao().deleteUser(userModel);
     }
 
     @Override
-//    @Transactional
+    @Transactional
     public void update(UserModel userModel) {
         UserEntity userEntity =new UserEntity();
         userEntity.setUserId(userModel.getUserId());
