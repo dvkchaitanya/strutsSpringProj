@@ -1462,3 +1462,7 @@ java.lang.NoSuchMethodException: com.koushik.javabrains.model.TweetModel.setTwee
 \--------------------------------------/
 2013-11-03 14:55:17 INFO  TweetDaoImpl:55 - 11
 2013-11-03 14:55:17 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
+2013-11-03 15:53:51 INFO  UserController:60 - In index method back
+2013-11-03 15:53:51 INFO  UserController:63 - chandu:**********:happydays
+2013-11-03 15:53:51 INFO  UserController:63 - sukumar:**********:aarya 2
+2013-11-03 15:53:51 INFO  UserController:63 - keerthi:**********:toliprema

@@ -103,10 +103,10 @@
       <file leaf-file-name="UserDaoImpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/UserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="4" selection-start="962" selection-end="962" vertical-scroll-proportion="-0.74496645">
+            <state line="3" column="47" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="docComment;class#UserDaoImpl#0" expanded="false" />
-                <element signature="e#1354#1384#0" expanded="true" />
+                <element signature="e#1399#1429#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1037,10 +1037,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/koushik/javabrains/dao/impl/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="4" selection-start="962" selection-end="962" vertical-scroll-proportion="-0.74496645">
+        <state line="3" column="47" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="docComment;class#UserDaoImpl#0" expanded="false" />
-            <element signature="e#1354#1384#0" expanded="true" />
+            <element signature="e#1399#1429#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
 import org.hibernate.criterion.Expression;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -51,7 +52,7 @@ public class UserDaoImpl implements UserDao{
     @Override
     public void deleteUser(UserModel userModel ) {
         UserEntity userEntity= (UserEntity)getCurrentSession().
-                createCriteria(UserEntity.class).add(Expression.eq("userId",userModel.
+                createCriteria(UserEntity.class).add(Restrictions.eq("userId", userModel.
                 getUserId())).list().get(0);
         getCurrentSession().delete(userEntity);
     }
@@ -63,6 +64,6 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public UserEntity getUser(int userId) {
-          return (UserEntity)getCurrentSession().createCriteria(UserEntity.class).add(Expression.eq("userId",userId)).list().get(0);
+          return (UserEntity)getCurrentSession().createCriteria(UserEntity.class).add(Restrictions.eq("userId",userId)).list().get(0);
     }
 }
