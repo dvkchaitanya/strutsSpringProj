@@ -7,15 +7,15 @@
     <constant name="struts.devMode" value="true"/>
     <constant name="struts.action.extension" value=""/>
     <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
-    <package name="default" namespace="/" extends="struts-default">
+    <!--<package name="default" namespace="/" extends="struts-default">
 
-<!--		<action name="debugTagAction"
+&lt;!&ndash;		<action name="debugTagAction"
 			class="com.koushik.javabrains.action.DebugTagAction >
 			<result name="success">pages/debug.jsp</result>
-		</action>-->
+		</action>&ndash;&gt;
 
-	</package>
-    <package name="struts2Tweet" namespace="/tweet" extends="struts-default">
+	</package>-->
+    <package name="struts2User" namespace="/user" extends="struts-default">
          <interceptors>
             <interceptor name="redirectMessage"
                          class="my.struts.interceptor.RedirectMessageInterceptor" />
@@ -26,32 +26,31 @@
          </interceptors>
          <default-interceptor-ref name="myStack" />
 
-        <action name="index" class="com.koushik.javabrains.action.TweetController" method="index">
-            <result name="success">/tweet/index.jsp</result>
+        <action name="index" class="com.koushik.javabrains.action.UserController" method="index">
+            <result name="success">/user/index.jsp</result>
         </action>
 
-        <action name="create" class="com.koushik.javabrains.action.TweetController" method="create">
-            <result>/tweet/create.jsp</result>
+        <action name="create">
+            <result>/user/create.jsp</result>
         </action>
 
-         <action name="insert" class="com.koushik.javabrains.action.TweetController" method="insert">
+         <action name="insert" class="com.koushik.javabrains.action.UserController" method="insert">
              <result name="success" type="redirectAction">index</result>
-             <result name="input">/tweet/create.jsp</result>
+             <result name="input">/user/create.jsp</result>
         </action>
 
         <action name="update">
-            <result>/tweet/update.jsp</result>
+            <result>/user/update.jsp</result>
         </action>
 
-        <action name="processUpdate" class="com.koushik.javabrains.action.TweetController" method="update">
+        <action name="processUpdate" class="com.koushik.javabrains.action.UserController" method="update">
             <result name="success" type="redirectAction">index</result>
-            <result name="input" >/tweet/update.jsp</result>
+            <result name="input" >/user/update.jsp</result>
         </action>
 
-        <action name="delete" class="com.koushik.javabrains.action.TweetController" method="delete" >
+        <action name="delete" class="com.koushik.javabrains.action.UserController" method="delete" >
             <result name="success" type="redirectAction">index</result>
         </action>
-
-    </package>
+     </package>
 
 </struts>

@@ -13,5 +13,5 @@
     <package name="basicstruts2" extends="struts-default"> </package>
 
     <include file="struts-tweet.xml"/>
-    <!--<include file="struts-user.xml"/>-->
+    <include file="struts-user.xml"/>
 </struts>

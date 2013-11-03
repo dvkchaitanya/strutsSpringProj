@@ -3,6 +3,8 @@ package com.koushik.javabrains.dao.impl;
 import com.koushik.javabrains.dao.TweetDao;
 import com.koushik.javabrains.entity.TweetEntity;
 import com.koushik.javabrains.model.TweetModel;
+import com.koushik.javabrains.service.UserService;
+import com.koushik.javabrains.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
@@ -26,6 +28,8 @@ public class TweetDaoImpl implements TweetDao{
 //    private HibernateTemplate hibernateTemplate;
 //    @Autowired
 //    private TweetEntity tweetEntity;
+    @Autowired
+    private UserService userService;
     private SessionFactory sessionFactory;
     private static final Logger logger = Logger.getLogger(TweetDaoImpl.class);
     @Autowired
@@ -48,7 +52,8 @@ public class TweetDaoImpl implements TweetDao{
         TweetEntity tweetEntity = new TweetEntity();
         tweetEntity.setTweetId(tweetModel.getTweetId());
         tweetEntity.setTweet(tweetModel.getTweet());
-        logger.info(tweetEntity.toString() + "sexy shakeela");
+        logger.info(tweetModel.getUserSel());
+        tweetEntity.setUserEntity(getUserService().getUserDao().getUser(tweetModel.getUserSel()));
         getCurrentSession().save(tweetEntity);
     }
 
@@ -68,13 +73,7 @@ public class TweetDaoImpl implements TweetDao{
         hibernateTemplate.delete(tweetEntity);*/
 
         TweetEntity tweetEntity= (TweetEntity)getCurrentSession().get(TweetEntity.class,tweetModel.getTweetId());
-        logger.info(tweetModel.getTweetId());
 
-        logger.info("executing deleteTweet method");
-        logger.info(tweetEntity);
-        logger.info(tweetEntity.getTweet());
-        logger.info(tweetEntity.getTweetId());
-        logger.info("hello");
         getCurrentSession().delete(tweetEntity);
     }
 
@@ -86,5 +85,11 @@ public class TweetDaoImpl implements TweetDao{
         getCurrentSession().update(tweetEntity);
     }
 
+    public UserService getUserService() {
+        return userService;
+    }
 
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
 }

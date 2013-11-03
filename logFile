@@ -1,55 +1,62 @@
-
-2013-10-30 23:04:40 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
-2013-10-31 00:09:26 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts-default.xml]
-2013-10-31 00:09:27 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts-plugin.xml]
-2013-10-31 00:09:27 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts.xml]
-2013-10-31 00:09:27 INFO  DefaultConfiguration:31 - Overriding property struts.i18n.reload - old value: false new value: true
-2013-10-31 00:09:27 INFO  DefaultConfiguration:31 - Overriding property struts.configuration.xml.reload - old value: false new value: true
-2013-10-31 00:09:27 INFO  StrutsSpringObjectFactory:31 - Initializing Struts-Spring integration...
-2013-10-31 00:09:27 INFO  SpringObjectFactory:31 - Setting autowire strategy to name
-2013-10-31 00:09:27 INFO  StrutsSpringObjectFactory:31 - ... initialized Struts-Spring integration successfully
-2013-10-31 00:09:33 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
-2013-10-31 00:09:39 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
-2013-10-31 00:09:53 INFO  TweetController:80 - insert() method called
-2013-10-31 00:09:53 INFO  TweetDaoImpl:51 - com.koushik.javabrains.entity.TweetEntity@130fdfdsexy shakeela
-2013-10-31 00:09:53 WARN  JDBCExceptionReporter:77 - SQL Error: 1109, SQLState: 42S02
-2013-10-31 00:09:53 ERROR JDBCExceptionReporter:78 - Unknown table 'hibernate_sequence' in field list
-2013-10-31 00:09:53 ERROR runtime:96 - 
-Method public java.lang.String org.hibernate.exception.NestableRuntimeException.getMessage(int) threw an exception when invoked on org.hibernate.exception.SQLGrammarException: could not get next sequence value
-The problematic instruction:
-----------
-==> ${msg[0]} [on line 68, column 29 in org/apache/struts2/dispatcher/error.ftl]
-----------
-
-Java backtrace for programmers:
-----------
-freemarker.template.TemplateModelException: Method public java.lang.String org.hibernate.exception.NestableRuntimeException.getMessage(int) threw an exception when invoked on org.hibernate.exception.SQLGrammarException: could not get next sequence value
-	at freemarker.ext.beans.SimpleMethodModel.exec(SimpleMethodModel.java:130)
-	at freemarker.ext.beans.SimpleMethodModel.get(SimpleMethodModel.java:138)
-	at freemarker.core.DynamicKeyName.dealWithNumericalKey(DynamicKeyName.java:111)
-	at freemarker.core.DynamicKeyName._getAsTemplateModel(DynamicKeyName.java:90)
-	at freemarker.core.Expression.getAsTemplateModel(Expression.java:89)
-	at freemarker.core.Expression.getStringValue(Expression.java:93)
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
-	at freemarker.core.Environment.visit(Environment.java:209)
-	at freemarker.core.MixedContent.accept(MixedContent.java:92)
-	at freemarker.core.Environment.visit(Environment.java:209)
-	at freemarker.core.IfBlock.accept(IfBlock.java:82)
-	at freemarker.core.Environment.visit(Environment.java:209)
-	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
-	at freemarker.core.Environment.visit(Environment.java:416)
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
-	at freemarker.core.Environment.visit(Environment.java:209)
-	at freemarker.core.MixedContent.accept(MixedContent.java:92)
-	at freemarker.core.Environment.visit(Environment.java:209)
-	at freemarker.core.IfBlock.accept(IfBlock.java:82)
-	at freemarker.core.Environment.visit(Environment.java:209)
-	at freemarker.core.MixedContent.accept(MixedContent.java:92)
-	at freemarker.core.Environment.visit(Environment.java:209)
-	at freemarker.core.Environment.process(Environment.java:189)
-	at freemarker.template.Template.process(Template.java:237)
-	at org.apache.struts2.dispatcher.Dispatcher.sendError(Dispatcher.java:748)
-	at org.apache.struts2.dispatcher.Dispatcher.serviceAction(Dispatcher.java:505)
+013-11-02 22:07:23 INFO  StrutsSpringObjectFactory:31 - ... initialized Struts-Spring integration successfully
+2013-11-02 22:12:54 INFO  TweetController:135 - in populateUserNamesForDropDownList
+2013-11-02 22:12:54 INFO  UserServiceImpl:49 - In service class  showAllUsers sexy
+2013-11-02 22:12:54 INFO  UserDaoImpl:59 - sexy too
+2013-11-02 22:13:15 WARN  OgnlValueStack:49 - Error setting expression 'tweetId' with value '[Ljava.lang.String;@d04dcc'
+ognl.MethodFailedException: Method "setTweetId" failed for object com.koushik.javabrains.model.TweetModel@bb4348 [java.lang.NoSuchMethodException: com.koushik.javabrains.model.TweetModel.setTweetId([Ljava.lang.String;)]
+	at ognl.OgnlRuntime.callAppropriateMethod(OgnlRuntime.java:1265)
+	at ognl.OgnlRuntime.setMethodValue(OgnlRuntime.java:1454)
+	at ognl.ObjectPropertyAccessor.setPossibleProperty(ObjectPropertyAccessor.java:85)
+	at ognl.ObjectPropertyAccessor.setProperty(ObjectPropertyAccessor.java:162)
+	at com.opensymphony.xwork2.ognl.accessor.ObjectAccessor.setProperty(ObjectAccessor.java:28)
+	at ognl.OgnlRuntime.setProperty(OgnlRuntime.java:2225)
+	at com.opensymphony.xwork2.ognl.accessor.CompoundRootAccessor.setProperty(CompoundRootAccessor.java:65)
+	at ognl.OgnlRuntime.setProperty(OgnlRuntime.java:2225)
+	at ognl.ASTProperty.setValueBody(ASTProperty.java:127)
+	at ognl.SimpleNode.evaluateSetValueBody(SimpleNode.java:220)
+	at ognl.SimpleNode.setValue(SimpleNode.java:301)
+	at ognl.Ognl.setValue(Ognl.java:737)
+	at com.opensymphony.xwork2.ognl.OgnlUtil.setValue(OgnlUtil.java:198)
+	at com.opensymphony.xwork2.ognl.OgnlValueStack.setValue(OgnlValueStack.java:161)
+	at com.opensymphony.xwork2.ognl.OgnlValueStack.setValue(OgnlValueStack.java:149)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.setParameters(ParametersInterceptor.java:276)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:187)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:87)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:195)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:87)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.StaticParametersInterceptor.intercept(StaticParametersInterceptor.java:179)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at org.apache.struts2.interceptor.FileUploadInterceptor.intercept(FileUploadInterceptor.java:235)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.ModelDrivenInterceptor.intercept(ModelDrivenInterceptor.java:89)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.ChainingInterceptor.intercept(ChainingInterceptor.java:126)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.PrepareInterceptor.doIntercept(PrepareInterceptor.java:138)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:87)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at org.apache.struts2.interceptor.ServletConfigInterceptor.intercept(ServletConfigInterceptor.java:164)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:195)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:87)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at org.apache.struts2.interceptor.MultiselectInterceptor.intercept(MultiselectInterceptor.java:75)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at org.apache.struts2.interceptor.CheckboxInterceptor.intercept(CheckboxInterceptor.java:94)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.I18nInterceptor.intercept(I18nInterceptor.java:165)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.AliasInterceptor.intercept(AliasInterceptor.java:179)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor.intercept(ExceptionMappingInterceptor.java:176)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at my.struts.interceptor.RedirectMessageInterceptor.doIntercept(RedirectMessageInterceptor.java:66)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:87)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at org.apache.struts2.impl.StrutsActionProxy.execute(StrutsActionProxy.java:52)
+	at org.apache.struts2.dispatcher.Dispatcher.serviceAction(Dispatcher.java:488)
 	at org.apache.struts2.dispatcher.ng.ExecuteOperations.executeAction(ExecuteOperations.java:77)
 	at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.doFilter(StrutsPrepareAndExecuteFilter.java:91)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:256)
@@ -77,25 +84,97 @@ freemarker.template.TemplateModelException: Method public java.lang.String org.h
 	at com.sun.grizzly.util.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:532)
 	at com.sun.grizzly.util.AbstractThreadPool$Worker.run(AbstractThreadPool.java:513)
 	at java.lang.Thread.run(Thread.java:722)
-Caused by: java.lang.NullPointerException
-	at freemarker.ext.beans.SimpleMemberModel.unwrapArguments(SimpleMemberModel.java:85)
-	at freemarker.ext.beans.SimpleMethodModel.exec(SimpleMethodModel.java:106)
-	... 52 more
-2013-10-31 00:12:11 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts-default.xml]
-2013-10-31 00:12:12 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts-plugin.xml]
-2013-10-31 00:12:12 INFO  XmlConfigurationProvider:31 - Parsing configuration file [struts.xml]
-2013-10-31 00:12:12 INFO  DefaultConfiguration:31 - Overriding property struts.i18n.reload - old value: false new value: true
-2013-10-31 00:12:12 INFO  DefaultConfiguration:31 - Overriding property struts.configuration.xml.reload - old value: false new value: true
-2013-10-31 00:12:13 INFO  StrutsSpringObjectFactory:31 - Initializing Struts-Spring integration...
-2013-10-31 00:12:13 INFO  SpringObjectFactory:31 - Setting autowire strategy to name
-2013-10-31 00:12:13 INFO  StrutsSpringObjectFactory:31 - ... initialized Struts-Spring integration successfully
-2013-10-31 00:12:32 INFO  TweetController:80 - insert() method called
-2013-10-31 00:12:33 INFO  TweetDaoImpl:51 - com.koushik.javabrains.entity.TweetEntity@135dd2sexy shakeela
-2013-10-31 00:12:33 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
-2013-10-31 00:12:54 INFO  TweetController:80 - insert() method called
-2013-10-31 00:12:54 INFO  TweetDaoImpl:51 - com.koushik.javabrains.entity.TweetEntity@1d164efsexy shakeela
-2013-10-31 00:12:54 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
-2013-10-31 00:13:08 INFO  TweetController:80 - insert() method called
-2013-10-31 00:13:08 INFO  TweetDaoImpl:51 - com.koushik.javabrains.entity.TweetEntity@12e8f81sexy shakeela
-2013-10-31 00:13:09 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
-2013-10-31 00:13:21 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
+Caused by: java.lang.NoSuchMethodException: com.koushik.javabrains.model.TweetModel.setTweetId([Ljava.lang.String;)
+	at ognl.OgnlRuntime.callAppropriateMethod(OgnlRuntime.java:1206)
+	... 79 more
+/-- Encapsulated exception ------------\
+java.lang.NoSuchMethodException: com.koushik.javabrains.model.TweetModel.setTweetId([Ljava.lang.String;)
+	at ognl.OgnlRuntime.callAppropriateMethod(OgnlRuntime.java:1206)
+	at ognl.OgnlRuntime.setMethodValue(OgnlRuntime.java:1454)
+	at ognl.ObjectPropertyAccessor.setPossibleProperty(ObjectPropertyAccessor.java:85)
+	at ognl.ObjectPropertyAccessor.setProperty(ObjectPropertyAccessor.java:162)
+	at com.opensymphony.xwork2.ognl.accessor.ObjectAccessor.setProperty(ObjectAccessor.java:28)
+	at ognl.OgnlRuntime.setProperty(OgnlRuntime.java:2225)
+	at com.opensymphony.xwork2.ognl.accessor.CompoundRootAccessor.setProperty(CompoundRootAccessor.java:65)
+	at ognl.OgnlRuntime.setProperty(OgnlRuntime.java:2225)
+	at ognl.ASTProperty.setValueBody(ASTProperty.java:127)
+	at ognl.SimpleNode.evaluateSetValueBody(SimpleNode.java:220)
+	at ognl.SimpleNode.setValue(SimpleNode.java:301)
+	at ognl.Ognl.setValue(Ognl.java:737)
+	at com.opensymphony.xwork2.ognl.OgnlUtil.setValue(OgnlUtil.java:198)
+	at com.opensymphony.xwork2.ognl.OgnlValueStack.setValue(OgnlValueStack.java:161)
+	at com.opensymphony.xwork2.ognl.OgnlValueStack.setValue(OgnlValueStack.java:149)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.setParameters(ParametersInterceptor.java:276)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:187)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:87)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:195)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:87)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.StaticParametersInterceptor.intercept(StaticParametersInterceptor.java:179)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at org.apache.struts2.interceptor.FileUploadInterceptor.intercept(FileUploadInterceptor.java:235)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.ModelDrivenInterceptor.intercept(ModelDrivenInterceptor.java:89)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.ChainingInterceptor.intercept(ChainingInterceptor.java:126)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.PrepareInterceptor.doIntercept(PrepareInterceptor.java:138)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:87)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at org.apache.struts2.interceptor.ServletConfigInterceptor.intercept(ServletConfigInterceptor.java:164)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:195)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:87)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at org.apache.struts2.interceptor.MultiselectInterceptor.intercept(MultiselectInterceptor.java:75)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at org.apache.struts2.interceptor.CheckboxInterceptor.intercept(CheckboxInterceptor.java:94)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.I18nInterceptor.intercept(I18nInterceptor.java:165)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.AliasInterceptor.intercept(AliasInterceptor.java:179)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor.intercept(ExceptionMappingInterceptor.java:176)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at my.struts.interceptor.RedirectMessageInterceptor.doIntercept(RedirectMessageInterceptor.java:66)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:87)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:237)
+	at org.apache.struts2.impl.StrutsActionProxy.execute(StrutsActionProxy.java:52)
+	at org.apache.struts2.dispatcher.Dispatcher.serviceAction(Dispatcher.java:488)
+	at org.apache.struts2.dispatcher.ng.ExecuteOperations.executeAction(ExecuteOperations.java:77)
+	at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.doFilter(StrutsPrepareAndExecuteFilter.java:91)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:256)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:217)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:279)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardPipeline.doInvoke(StandardPipeline.java:655)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:595)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:161)
+	at org.apache.catalina.connector.CoyoteAdapter.doService(CoyoteAdapter.java:331)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:231)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$AdapterCallable.call(ContainerMapper.java:317)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:195)
+	at com.sun.grizzly.http.ProcessorTask.invokeAdapter(ProcessorTask.java:860)
+	at com.sun.grizzly.http.ProcessorTask.doProcess(ProcessorTask.java:757)
+	at com.sun.grizzly.http.ProcessorTask.process(ProcessorTask.java:1056)
+	at com.sun.grizzly.http.DefaultProtocolFilter.execute(DefaultProtocolFilter.java:229)
+	at com.sun.grizzly.DefaultProtocolChain.executeProtocolFilter(DefaultProtocolChain.java:137)
+	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:104)
+	at com.sun.grizzly.DefaultProtocolChain.execute(DefaultProtocolChain.java:90)
+	at com.sun.grizzly.http.HttpProtocolChain.execute(HttpProtocolChain.java:79)
+	at com.sun.grizzly.ProtocolChainContextTask.doCall(ProtocolChainContextTask.java:54)
+	at com.sun.grizzly.SelectionKeyContextTask.call(SelectionKeyContextTask.java:59)
+	at com.sun.grizzly.ContextTask.run(ContextTask.java:71)
+	at com.sun.grizzly.util.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:532)
+	at com.sun.grizzly.util.AbstractThreadPool$Worker.run(AbstractThreadPool.java:513)
+	at java.lang.Thread.run(Thread.java:722)
+\--------------------------------------/
+2013-11-02 22:13:16 INFO  TweetDaoImpl:55 - 3
+2013-11-02 22:13:16 INFO  TweetServiceImpl:49 - In service class  showAllTweets sexy
+2013-11-02 22:13:23 INFO  UserServiceImpl:49 - In service class  showAllUsers sexy
+2013-11-02 22:13:23 INFO  UserDaoImpl:59 - sexy too
+2013-11-02 22:13:23 INFO  UserController:60 - In index method back
+2013-11-02 22:13:23 INFO  UserController:63 - user1:**********:jayasudha
+2013-11-02 22:13:23 INFO  UserController:63 - user2:**********:richie richa
+2013-11-02 22:13:23 INFO  UserController:63 - user7:**********:surender

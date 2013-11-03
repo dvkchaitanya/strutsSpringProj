@@ -1,8 +1,10 @@
 package com.koushik.javabrains.action;
 
 import com.koushik.javabrains.entity.TweetEntity;
+import com.koushik.javabrains.entity.UserEntity;
 import com.koushik.javabrains.model.TweetModel;
 import com.koushik.javabrains.service.TweetService;
+import com.koushik.javabrains.service.UserService;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import org.apache.log4j.Logger;
@@ -20,10 +22,13 @@ public class TweetController extends ActionSupport implements ModelDriven{
 
     private static final Logger logger = Logger.getLogger(TweetController.class);
     private TweetService tweetService;
+    private UserService userService;
     private List<TweetModel> tweetModels;
     private TweetModel tweetModel = new TweetModel();
     private Map session;
     private List<TweetEntity> tweetEntities;
+    private List<UserEntity> userEntities;
+    private String userSel;
 
     public void setTweetModel(TweetModel tweetModel) {
         this.tweetModel = tweetModel;
@@ -57,27 +62,28 @@ public class TweetController extends ActionSupport implements ModelDriven{
     public void setTweetService(TweetService tweetService) {
         this.tweetService = tweetService;
     }
-   public String index() throws Exception {
-//        setTweetModels(tweetService.showAllTweets());
-       setTweetEntities(tweetService.showAllTweets());
-       logger.debug("In index method back");
-//       for(TweetEntity tweetEntity : tweetEntities ){
-       for (TweetEntity tweetEntity : tweetEntities) {
-               logger.debug(tweetEntity.toString());
-                logger.debug(tweetEntity.getTweet());
-                logger.debug(tweetEntity.getTweetId());
-                logger.debug("In for loop");
-            }
-//       }
+
+    public UserService getUserService() {
+        return userService;
+    }
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+
+    public String index() throws Exception {
+       setTweetEntities(getTweetService().showAllTweets());
         return SUCCESS;
     }
 
     public String create(){
+        populateUserNamesForDropDownList();
+
         return SUCCESS;
     }
 
      public String insert(){
-         logger.info("insert() method called");
+
         getTweetService().insert(tweetModel);
         return SUCCESS;
     }
@@ -124,5 +130,25 @@ public class TweetController extends ActionSupport implements ModelDriven{
 
     public List<TweetEntity> getTweetEntities() {
         return tweetEntities;
+    }
+    private void populateUserNamesForDropDownList(){
+        logger.info("in populateUserNamesForDropDownList");
+        setUserEntities(getUserService().showAllUsers()) ;
+    }
+
+    public List<UserEntity> getUserEntities() {
+        return userEntities;
+    }
+
+    public void setUserEntities(List<UserEntity> userEntities) {
+        this.userEntities = userEntities;
+    }
+
+    public String getUserSel() {
+        return userSel;
+    }
+
+    public void setUserSel(String userSel) {
+        this.userSel = userSel;
     }
 }

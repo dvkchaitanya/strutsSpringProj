@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Data Source2" product="" version="" jdbc-version="" driver-version="" uuid="d02ddce6-6960-496c-bebe-0899babce90f">
+  <data-source source="LOCAL" name="Data Source2" product="MySQL" version="5.5.24-log" jdbc-version="3.0" driver-version="mysql-connector-java-5.1.8 ( Revision: ${svn.Revision} )" uuid="d02ddce6-6960-496c-bebe-0899babce90f">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
     <jdbc-url>jdbc:mysql://127.0.0.1:3306/twitdatabase</jdbc-url>
     <user-name>root</user-name>
@@ -12,12 +14,15 @@
       </library>
     </libraries>
     <table name="tweeets" schema="" catalog="twitdatabase" type="TABLE">
-      <column name="tweetId" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="tweetId" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="tweet" sqlType="VARCHAR" length="140" precision="0" nullable="true" jdbcType="12" />
+      <column name="userId" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="tweetid" />
     </table>
-    <table name="user" schema="" catalog="twitdatabase" type="TABLE">
-      <column name="userId" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+    <table name="users" schema="" catalog="twitdatabase" type="TABLE">
+      <column name="userId" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA==" />
       <column name="userName" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="userid" />
     </table>
   </data-source>
 </component>

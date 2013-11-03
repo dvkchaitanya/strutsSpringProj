@@ -32,6 +32,7 @@
    </s:iterator>
 </table>
         <s:a action="create">create new tweet</s:a>
+
     <s:if test="hasActionMessages()">
         <s:actionmessage/>
     </s:if>

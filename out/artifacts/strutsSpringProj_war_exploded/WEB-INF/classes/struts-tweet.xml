@@ -30,7 +30,7 @@
             <result name="success">/tweet/index.jsp</result>
         </action>
 
-        <action name="create">
+        <action name="create" class="com.koushik.javabrains.action.TweetController" method="create">
             <result>/tweet/create.jsp</result>
         </action>
 

@@ -15,14 +15,14 @@ import javax.persistence.Table;
  * Time: 11:25 PM
  * To change this template use File | Settings | File Templates.
  */
-@Entity(name ="tweetModel")
 @Component("tweetModel")
-@Table(name = "tweeets")
 public class TweetModel {
 
     private int tweetId;
 
     private String tweet;
+
+    private int userSel;
 
     public int getTweetId() {
         return tweetId;
@@ -32,6 +32,9 @@ public class TweetModel {
         this.tweetId = tweetId;
     }
 
+    public void setTweetId(String tweetId){
+        this.tweetId = Integer.parseInt(tweetId);
+    }
     public String getTweet() {
         return tweet;
     }
@@ -40,4 +43,11 @@ public class TweetModel {
         this.tweet = aTweet;
     }
 
+    public int getUserSel() {
+        return userSel;
+    }
+
+    public void setUserSel(int userSel) {
+        this.userSel = userSel;
+    }
 }

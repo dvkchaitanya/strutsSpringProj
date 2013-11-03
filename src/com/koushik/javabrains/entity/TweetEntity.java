@@ -21,11 +21,17 @@ public class TweetEntity
         implements Serializable
 {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "tweetId")
     private int tweetId;
 
     @Column(name = "tweet")
     private String tweet;
+
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userId", nullable = false)
+    private UserEntity userEntity;
 
     public int getTweetId() {
         return tweetId;
@@ -43,4 +49,11 @@ public class TweetEntity
         this.tweet = tweet;
     }
 
+    public UserEntity getUserEntity() {
+        return userEntity;
+    }
+
+    public void setUserEntity(UserEntity userEntity) {
+        this.userEntity = userEntity;
+    }
 }
