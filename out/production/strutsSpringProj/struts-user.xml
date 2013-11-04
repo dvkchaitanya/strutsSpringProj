@@ -16,6 +16,10 @@
 
 	</package>-->
     <package name="struts2User" namespace="/user" extends="struts-default">
+        <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+        </result-types>
+
          <interceptors>
             <interceptor name="redirectMessage"
                          class="my.struts.interceptor.RedirectMessageInterceptor" />
@@ -27,29 +31,34 @@
          <default-interceptor-ref name="myStack" />
 
         <action name="index" class="com.koushik.javabrains.action.UserController" method="index">
-            <result name="success">/user/index.jsp</result>
+            <!--<result name="success">/user/index.jsp</result>-->
+            <result name="success" type="tiles">/user_index.tiles</result>
         </action>
 
         <action name="create">
-            <result>/user/create.jsp</result>
+            <!--<result>/user/create.jsp</result>-->
+            <result type="tiles">/user_create.tiles</result>
         </action>
 
          <action name="insert" class="com.koushik.javabrains.action.UserController" method="insert">
              <result name="success" type="redirectAction">index</result>
-             <result name="input">/user/create.jsp</result>
+             <!--<result name="input">/user/create.jsp</result>-->
+             <result name="input" type="redirectAction">create</result>
         </action>
 
         <action name="update">
-            <result>/user/update.jsp</result>
+            <result type="tiles">/user_update.tiles</result>
         </action>
 
         <action name="processUpdate" class="com.koushik.javabrains.action.UserController" method="update">
             <result name="success" type="redirectAction">index</result>
-            <result name="input" >/user/update.jsp</result>
+            <!--<result name="input" >/user/update.jsp</result>-->
+            <result name="input" type="redirectAction">update</result>
         </action>
 
         <action name="delete" class="com.koushik.javabrains.action.UserController" method="delete" >
             <result name="success" type="redirectAction">index</result>
+            <!--<result name="success" type="redirectAction">index</result>-->
         </action>
      </package>
 

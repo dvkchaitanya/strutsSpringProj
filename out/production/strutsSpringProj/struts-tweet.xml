@@ -15,7 +15,12 @@
 		</action>-->
 
 	</package>
+
     <package name="struts2Tweet" namespace="/tweet" extends="struts-default">
+        <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+        </result-types>
+
          <interceptors>
             <interceptor name="redirectMessage"
                          class="my.struts.interceptor.RedirectMessageInterceptor" />
@@ -26,21 +31,26 @@
          </interceptors>
          <default-interceptor-ref name="myStack" />
 
+
         <action name="index" class="com.koushik.javabrains.action.TweetController" method="index">
-            <result name="success">/tweet/index.jsp</result>
+            <!--<result name="success">/tweet/index.jsp</result>-->
+            <result name="success" type="tiles">/tweet_index.tiles</result>
         </action>
 
         <action name="create" class="com.koushik.javabrains.action.TweetController" method="create">
-            <result>/tweet/create.jsp</result>
+            <!--<result>/tweet/create.jsp</result>-->
+            <result type="tiles">/tweet_create.tiles</result>
         </action>
 
          <action name="insert" class="com.koushik.javabrains.action.TweetController" method="insert">
              <result name="success" type="redirectAction">index</result>
-             <result name="input">/tweet/create.jsp</result>
+             <result name="input" type="redirectAction">create</result>
+             <!--<result name="input" type="tiles">/tweet_create.tiles</result>-->
         </action>
 
         <action name="update">
-            <result>/tweet/update.jsp</result>
+            <!--<result>/tweet/update.jsp</result>-->
+            <result name="success" type="tiles">/tweet_update.tiles</result>
         </action>
 
         <action name="processUpdate" class="com.koushik.javabrains.action.TweetController" method="update">
@@ -51,7 +61,5 @@
         <action name="delete" class="com.koushik.javabrains.action.TweetController" method="delete" >
             <result name="success" type="redirectAction">index</result>
         </action>
-
     </package>
-
 </struts>

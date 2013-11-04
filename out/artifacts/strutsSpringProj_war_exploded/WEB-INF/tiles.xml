@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="baseLayout" template="../BaseLayout.jsp">
+        <put-attribute name="title" value=""></put-attribute>
+        <put-attribute name="header" value="/Header.jsp"></put-attribute>
+        <put-attribute name="menu" value="/Menu.jsp"></put-attribute>
+        <put-attribute name="body" value=""></put-attribute>
+        <put-attribute name="footer" value="/Footer.jsp"></put-attribute>
+    </definition>
+    <definition name="/tweet_create.tiles" extends="baseLayout">
+        <put-attribute name="title" value="create a tweet"/>
+        <put-attribute name="body" value="/tweet/create.jsp"/>
+    </definition>
+
+    <definition name="/tweet_index.tiles" extends="baseLayout">
+        <put-attribute name="title" value="create a tweet"/>
+        <put-attribute name="body" value="/tweet/index.jsp"/>
+    </definition>
+
+    <definition name="/tweet_update.tiles" extends="baseLayout">
+        <put-attribute name="title" value="create a tweet"/>
+        <put-attribute name="body" value="/tweet/update.jsp"/>
+    </definition>
+
+    <definition name="/user_create.tiles" extends="baseLayout">
+        <put-attribute name="title" value="create a user"/>
+        <put-attribute name="body" value="/user/create.jsp"/>
+    </definition>
+
+    <definition name="/user_index.tiles" extends="baseLayout">
+        <put-attribute name="title" value="create a user"/>
+        <put-attribute name="body" value="/user/index.jsp"/>
+    </definition>
+
+    <definition name="/user_update.tiles" extends="baseLayout">
+        <put-attribute name="title" value="create a user"/>
+        <put-attribute name="body" value="/user/update.jsp"/>
+    </definition>
+
+</tiles-definitions>
