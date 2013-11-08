@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+        "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.action.extension" value=""/>
+    <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+    <package name="default" namespace="/" extends="struts-default"/>
+
+    <package name="struts2Login" namespace="/login" extends="struts-default">
+
+
+         <interceptors>
+            <interceptor name="redirectMessage"
+                         class="my.struts.interceptor.RedirectMessageInterceptor" />
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="redirectMessage" />
+                <interceptor-ref name="paramsPrepareParamsStack" />
+            </interceptor-stack>
+         </interceptors>
+         <default-interceptor-ref name="myStack" />
+
+
+       <action name="index">
+           <result>/login/index.jsp</result>
+       </action>
+
+        <action name="validateUser" class="com.koushik.javabrains.action.LoginController" method="validateUser">
+            <result name="success" type="redirectAction">/user/index</result>
+            <result name="error" type="redirectAction">/login/index</result>
+        </action>
+
+    </package>
+</struts>

@@ -14,5 +14,5 @@
 
     <include file="struts-tweet.xml"/>
     <include file="struts-user.xml"/>
-
+    <!--<include file="struts-login.xml"/>-->
 </struts>

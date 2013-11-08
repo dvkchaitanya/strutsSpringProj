@@ -51,4 +51,13 @@ public class UserEntity implements Serializable {
     public void setTweetEntitiySet(Set<TweetEntity> tweetEntitiySet) {
         this.tweetEntitiySet = tweetEntitiySet;
     }
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", tweetEntitiySet=" + tweetEntitiySet +
+                '}';
+    }
 }

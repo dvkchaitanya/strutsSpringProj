@@ -6,6 +6,7 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="strutsSpringProj" />
+          <element id="library" level="project" name="org.springframework.security:spring-security-core:3.2.0.RC2" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="log4j:log4j:1.2.9" />
@@ -29,6 +30,9 @@
           <element id="library" level="project" name="org.apache.struts:struts2-core:2.2.1" />
           <element id="library" level="project" name="struts2-tiles-plugin-2.2" />
           <element id="library" level="project" name="org.springframework:spring-webmvc:3.2.2.RELEASE" />
+          <element id="library" level="project" name="org.springframework.security:spring-security-config:3.2.0.RC2" />
+          <element id="library" level="project" name="org.springframework.security:spring-security-core:3.2.0.RC2" />
+          <element id="library" level="project" name="org.springframework.security:spring-security-web:3.2.0.RC2" />
         </element>
       </element>
     </root>

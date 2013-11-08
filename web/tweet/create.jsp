@@ -21,6 +21,7 @@
 
         <s:select label="select an user" name="userSel"
                       list="userEntities" listKey="userId"
+
                       listValue="userName" headerKey="0" headerValue="user name"/>
 
         <s:submit value="submit" />

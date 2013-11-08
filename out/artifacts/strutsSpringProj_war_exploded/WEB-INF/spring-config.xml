@@ -50,4 +50,5 @@
 <!--    <bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">
         <property name="transactionManager" ref="transactionManager"/>
     </bean>-->
+    <!--<import resource="spring-security.xml"/>-->
 </beans>

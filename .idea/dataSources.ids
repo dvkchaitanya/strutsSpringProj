@@ -16,12 +16,20 @@
     <table name="tweeets" schema="" catalog="twitdatabase" type="TABLE">
       <column name="tweetId" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="tweet" sqlType="VARCHAR" length="140" precision="0" nullable="true" jdbcType="12" />
-      <column name="userId" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" />
+      <column name="userId" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="PRIMARY" columns="tweetid" />
+      <foreign-key name="FKC9224461721420A3" columns="userId" ref-table="users" ref-schema="" ref-catalog="twitdatabase" ref-columns="userId" />
+    </table>
+    <table name="userrolerepo" schema="" catalog="twitdatabase" type="TABLE">
+      <column name="userId" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="userName" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" />
+      <column name="roleName" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="userid" />
     </table>
     <table name="users" schema="" catalog="twitdatabase" type="TABLE">
-      <column name="userId" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA==" />
+      <column name="userId" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="userName" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" />
+      <column name="userLastName" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" />
       <primary-key name="PRIMARY" columns="userid" />
     </table>
   </data-source>
