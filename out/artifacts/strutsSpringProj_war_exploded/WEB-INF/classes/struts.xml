@@ -9,6 +9,7 @@
 <constant name="struts.devMode" value="true"/>
     <constant name="struts.action.extension" value=""/>
     <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+    <constant name="struts.action.excludePattern" value="userService/*.wsdl"/>
 
     <package name="basicstruts2" extends="struts-default"> </package>
 

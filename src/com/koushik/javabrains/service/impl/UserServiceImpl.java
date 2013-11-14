@@ -71,6 +71,12 @@ public class UserServiceImpl implements UserService {
         userEntity.setUserName(userModel.getUserName());
         getUserDao().updateUser(userEntity);
     }
+
+    @Override
+    @Transactional
+    public UserEntity getUserById(int userId){
+        return getUserDao().getUser(userId);
+    }
 }
 
 

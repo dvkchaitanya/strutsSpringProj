@@ -8,7 +8,7 @@
     <constant name="struts.action.extension" value=""/>
     <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
     <package name="default" namespace="/" extends="struts-default"/>
-
+    <constant name="struts.action.excludePattern" value="userService/*.wsdl"/>
     <package name="struts2Login" namespace="/login" extends="struts-default">
 
 

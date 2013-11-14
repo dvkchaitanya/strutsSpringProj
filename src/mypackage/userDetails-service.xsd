@@ -1,0 +1,16 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  >
+           <!--  elementFormDefault="qualified"
+           targetNamespace="http://www.vdesu.strutsSpringProj.samples.com/users"
+           xmlns:users="http://www.vdesu.strutsSpringProj.samples.com/users">-->
+  <xs:element name="userDetailsRequest">
+    <xs:complexType>
+      <xs:attribute name="userId" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="userDetailsResponse">
+    <xs:complexType>
+      <xs:attribute name="userName" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.apache.ws.commons.schema:XmlSchema:1.4.3" type="repository">
+    <properties maven-id="org.apache.ws.commons.schema:XmlSchema:1.4.3" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/XmlSchema-1.4.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

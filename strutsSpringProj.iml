@@ -81,6 +81,9 @@
     <orderEntry type="library" name="org.springframework.security:spring-security-core:3.2.0.RC2" level="project" />
     <orderEntry type="library" name="org.springframework.security:spring-security-web:3.2.0.RC2" level="project" />
     <orderEntry type="library" name="org.springframework.security:spring-security-config:3.2.0.RC2" level="project" />
+    <orderEntry type="library" name="org.springframework:spring-oxm:3.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="org.springframework.ws:spring-ws-core:2.0.0.RELEASE" level="project" />
+    <orderEntry type="library" name="org.apache.ws.commons.schema:XmlSchema:1.4.3" level="project" />
   </component>
 </module>
 

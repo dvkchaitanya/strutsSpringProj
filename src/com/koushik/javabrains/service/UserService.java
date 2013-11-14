@@ -25,4 +25,6 @@ public interface UserService {
     void delete(UserModel userModel);
 
     void update(UserModel userModel);
+
+    UserEntity getUserById(int userId);
 }

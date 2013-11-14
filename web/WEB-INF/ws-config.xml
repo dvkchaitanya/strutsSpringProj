@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ws="http://www.springframework.org/schema/web-services"
+         xmlns:context="http://www.springframework.org/schema/context"
+         xsi:schemaLocation="
+                http://www.springframework.org/schema/web-services
+                http://www.springframework.org/schema/web-services/web-services-2.0.xsd
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:component-scan base-package="com.koushik.javabrains.spring.ws"/>
+    <ws:annotation-driven/>
+
+<!--    <ws:dynamic-wsdl id="userDefinition" portTypeName="8081"
+                     locationUri="http://localhost:8081/strutsSpringProj_war_exploded/users">
+        <ws:xsd location="/WEB-INF/schemas/xsd/userDetails-service.xsd"/>
+    </ws:dynamic-wsdl>-->
+    <!--targetNamespace="http://www.vdesu.strutsSpringProj.samples.com/users"-->
+<!--    <ws:dynamic-wsdl id="user" portTypeName="userResource"
+                      locationUri="http://localhost:8080/strutsSpringProj_war_exploded/userService">
+         <ws:xsd location="/WEB-INF/schemas/xsd/userDetails-service.xsd"/>
+    </ws:dynamic-wsdl>-->
+    <bean id="userDetailsService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
+        <property name="schemaCollection">
+            <bean class="org.springframework.xml.xsd.commons.CommonsXsdSchemaCollection">
+                <property name="inline" value="true"/>
+                <property name="xsds">
+                    <list>
+                        <value>WEB-INF/schemas/xsd/userDetails-service.xsd</value>
+                    </list>
+                </property>
+            </bean>
+        </property>
+        <property name="portTypeName" value="userDetailsService"/>
+        <property name="serviceName" value="userDetailsService"/>
+        <property name="locationUri" value="/endpoints"/>
+    </bean>
+</beans>
