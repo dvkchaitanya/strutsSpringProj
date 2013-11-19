@@ -30,7 +30,7 @@ public class TweetEntity
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId", nullable = false)
+    @JoinColumn(name = "userId", nullable = true)
     private UserEntity userEntity;
 
     public int getTweetId() {

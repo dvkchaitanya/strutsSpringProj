@@ -13,7 +13,7 @@
     <title> Struts Example |Create Form</title>
 </head>
 <body>
-    <s:form namespace="/user" action="insert">
+    <s:form namespace="/user" action="insert.do">
         <s:textfield value="" label="user id" name="userId"/>
         <s:textfield value="" label="user any thing" name="userName"/>
         <s:submit value="submit" />

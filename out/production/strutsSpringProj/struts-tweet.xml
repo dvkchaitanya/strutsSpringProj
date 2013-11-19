@@ -33,34 +33,35 @@
          <default-interceptor-ref name="myStack" />
 
 
-        <action name="index" class="com.koushik.javabrains.action.TweetController" method="index">
+        <action name="index.do" class="com.koushik.javabrains.action.TweetController" method="index">
             <!--<result name="success">/tweet/index.jsp</result>-->
             <result name="success" type="tiles">/tweet_index.tiles</result>
         </action>
 
-        <action name="create" class="com.koushik.javabrains.action.TweetController" method="create">
+        <action name="create.do" class="com.koushik.javabrains.action.TweetController" method="create">
             <!--<result>/tweet/create.jsp</result>-->
             <result type="tiles">/tweet_create.tiles</result>
         </action>
 
-         <action name="insert" class="com.koushik.javabrains.action.TweetController" method="insert">
-             <result name="success" type="redirectAction">index</result>
-             <result name="input" type="redirectAction">create</result>
+         <action name="insert.do" class="com.koushik.javabrains.action.TweetController" method="insert">
+             <result name="success" type="redirectAction">index.do</result>
+             <result name="input" type="redirectAction">create.do</result>
              <!--<result name="input" type="tiles">/tweet_create.tiles</result>-->
         </action>
 
-        <action name="update">
+        <action name="update.do">
             <!--<result>/tweet/update.jsp</result>-->
             <result name="success" type="tiles">/tweet_update.tiles</result>
         </action>
 
-        <action name="processUpdate" class="com.koushik.javabrains.action.TweetController" method="update">
-            <result name="success" type="redirectAction">index</result>
-            <result name="input" >/tweet/update.jsp</result>
+        <action name="processUpdate.do" class="com.koushik.javabrains.action.TweetController" method="update">
+            <result name="success" type="redirectAction">index.do</result>
+            <!--<result name="input" >/tweet/update.jsp</result>-->
+            <result name="input" type="redirectAction">update.do</result>
         </action>
 
-        <action name="delete" class="com.koushik.javabrains.action.TweetController" method="delete" >
-            <result name="success" type="redirectAction">index</result>
+        <action name="delete.do" class="com.koushik.javabrains.action.TweetController" method="delete" >
+            <result name="success" type="redirectAction">index.do</result>
         </action>
     </package>
 </struts>

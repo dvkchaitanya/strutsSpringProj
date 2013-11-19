@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <s:url action="update" var="updateUser" namespace="/user"  >
+    <s:url action="update.do" var="updateUser" namespace="/user"  >
         <s:param name="id" > <s:property value="userId"/></s:param>
     </s:url>
 
@@ -22,8 +22,8 @@
         <tbody>
              <td><s:property value="userId"/></td>
             <td><s:property value="userName"/></td>
-            <td><s:a action="update?userId=%{#userEntity.userId}">update</s:a></td>
-             <td><s:url id ="delete" action="delete">
+            <td><s:a action="update.do?userId=%{#userEntity.userId}">update</s:a></td>
+             <td><s:url id ="delete" action="delete.do">
                  <s:param name="userId" value="userId"></s:param>
              </s:url>
             <s:a href="%{delete}">delete</s:a>

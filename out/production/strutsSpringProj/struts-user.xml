@@ -31,34 +31,34 @@
          </interceptors>
          <default-interceptor-ref name="myStack" />
 
-        <action name="index" class="com.koushik.javabrains.action.UserController" method="index">
+        <action name="index.do" class="com.koushik.javabrains.action.UserController" method="index">
             <!--<result name="success">/user/index.jsp</result>-->
             <result name="success" type="tiles">/user_index.tiles</result>
         </action>
 
-        <action name="create">
+        <action name="create.do">
             <!--<result>/user/create.jsp</result>-->
             <result type="tiles">/user_create.tiles</result>
         </action>
 
-         <action name="insert" class="com.koushik.javabrains.action.UserController" method="insert">
-             <result name="success" type="redirectAction">index</result>
+         <action name="insert.do" class="com.koushik.javabrains.action.UserController" method="insert">
+             <result name="success" type="redirectAction">index.do</result>
              <!--<result name="input">/user/create.jsp</result>-->
-             <result name="input" type="redirectAction">create</result>
+             <result name="input" type="redirectAction">create.do</result>
         </action>
 
-        <action name="update">
+        <action name="update.do">
             <result type="tiles">/user_update.tiles</result>
         </action>
 
-        <action name="processUpdate" class="com.koushik.javabrains.action.UserController" method="update">
-            <result name="success" type="redirectAction">index</result>
+        <action name="processUpdate.do" class="com.koushik.javabrains.action.UserController" method="update">
+            <result name="success" type="redirectAction">index.do</result>
             <!--<result name="input" >/user/update.jsp</result>-->
-            <result name="input" type="redirectAction">update</result>
+            <result name="input" type="redirectAction">update.do</result>
         </action>
 
-        <action name="delete" class="com.koushik.javabrains.action.UserController" method="delete" >
-            <result name="success" type="redirectAction">index</result>
+        <action name="delete.do" class="com.koushik.javabrains.action.UserController" method="delete" >
+            <result name="success" type="redirectAction">index.do</result>
             <!--<result name="success" type="redirectAction">index</result>-->
         </action>
      </package>

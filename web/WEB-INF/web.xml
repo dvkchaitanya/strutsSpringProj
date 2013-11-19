@@ -22,7 +22,7 @@
 
     <filter-mapping>
         <filter-name>struts2</filter-name>
-        <url-pattern>/struts/*</url-pattern>
+        <url-pattern>*.do</url-pattern>
     </filter-mapping>
 
     <!--    <filter>

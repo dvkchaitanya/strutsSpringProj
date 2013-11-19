@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <s:url action="update" var="updateTweet" namespace="/tweet"  >
+    <s:url action="update.do" var="updateTweet" namespace="/tweet"  >
         <s:param name="id" > <s:property value="tweetId"/></s:param>
     </s:url>
 
@@ -22,8 +22,8 @@
         <tbody>
              <td><s:property value="tweetId"/></td>
             <td><s:property value="tweet"/></td>
-            <td><s:a action="update?tweetId=%{#tweetEntity.tweetId}">update</s:a></td>
-             <td><s:url id ="delete" action="delete">
+            <td><s:a action="update.do?tweetId=%{#tweetEntity.tweetId}">update</s:a></td>
+             <td><s:url id ="delete" action="delete.do">
                  <s:param name="tweetId" value="tweetId"></s:param>
              </s:url> 
             <s:a href="%{delete}">delete</s:a>
@@ -31,7 +31,7 @@
         </tbody>
    </s:iterator>
 </table>
-        <s:a action="create">create new tweet</s:a>
+        <s:a action="create.do">create new tweet</s:a>
 
     <s:if test="hasActionMessages()">
         <s:actionmessage/>

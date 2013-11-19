@@ -12,8 +12,8 @@
     <title></title>
 </head>
 <body>
-<s:url action="index" namespace="/tweet" var="tweet_index"></s:url>
-<s:url action="index" namespace="/user" var="user_index"></s:url>
+<s:url action="index.do" namespace="/tweet" var="tweet_index"></s:url>
+<s:url action="index.do" namespace="/user" var="user_index"></s:url>
 
 <ul>
     <li> <s:a href="%{tweet_index}"> tweet</s:a></li>

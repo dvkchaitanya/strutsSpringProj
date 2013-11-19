@@ -15,7 +15,7 @@
 <body>
 
     <s:property value="exampString"/>
-    <s:form namespace="/tweet" action="insert">
+    <s:form namespace="/tweet" action="insert.do">
         <s:textfield value="" label="tweet id" name="tweetId"/>
         <s:textfield value="" label="tweet any thing" name="tweet"/>
 
