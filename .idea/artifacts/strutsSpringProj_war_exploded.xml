@@ -36,6 +36,10 @@
           <element id="library" level="project" name="org.springframework:spring-oxm:3.2.2.RELEASE" />
           <element id="library" level="project" name="org.springframework.ws:spring-ws-core:2.0.0.RELEASE" />
           <element id="library" level="project" name="org.apache.ws.commons.schema:XmlSchema:1.4.3" />
+          <element id="library" level="project" name="org.codehaus.jackson:jackson-mapper-asl:1.9.10" />
+          <element id="library" level="project" name="javax.xml.bind:jaxb-api:2.2.10" />
+          <element id="library" level="project" name="com.sun.jersey:jersey-client:1.9" />
+          <element id="library" level="project" name="com.jgeppert.struts2.jquery:struts2-jquery-plugin:2.4.0" />
         </element>
       </element>
     </root>

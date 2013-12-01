@@ -14,14 +14,14 @@
 <body>
     <table>
         <tr>
-            <td colspan="2" height="30"><tiles:insertAttribute name="header"/> </td>
+            <td colspan="3" height="30"><tiles:insertAttribute name="header"/> </td>
         </tr>
         <tr>
             <td height="250"><tiles:insertAttribute name="menu"/> </td>
             <td height="250"><tiles:insertAttribute name="body"/> </td>
         </tr>
         <tr>
-            <td height="30" colspan="2"><tiles:insertAttribute name="footer"/></td>
+            <td height="30" colspan="3"><tiles:insertAttribute name="footer"/></td>
         </tr>
     </table>
 </body>

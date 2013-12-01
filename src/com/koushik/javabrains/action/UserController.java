@@ -1,9 +1,11 @@
 package com.koushik.javabrains.action;
 
+import com.jersey.client.Weather;
 import com.koushik.javabrains.entity.TweetEntity;
 import com.koushik.javabrains.entity.UserEntity;
 import com.koushik.javabrains.model.UserModel;
 import com.koushik.javabrains.service.UserService;
+import com.koushik.javabrains.viewBean.OnlyUserNameWithIds;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import org.apache.log4j.Logger;
@@ -25,6 +27,8 @@ public class UserController extends ActionSupport implements ModelDriven{
     private UserModel userModel = new UserModel();
     private List<UserEntity> userEntities;
     private List<UserModel> userModels;
+    private List<OnlyUserNameWithIds> onlyUserNameWithIdsList;
+
     private UserService userService;
     @Override
     public UserModel getModel() {
@@ -56,14 +60,10 @@ public class UserController extends ActionSupport implements ModelDriven{
 
     public String index() throws Exception {
 //        setUserModels(userService.showAllUsers());
-       setUserEntities(userService.showAllUsers());
-       logger.info("In index method back");
-       for (UserEntity userEntity : userEntities) {
-                for (TweetEntity tweetEntity :userEntity.getTweetEntitiySet()){
-                    logger.info(userEntity.getUserName() +":**********:"+tweetEntity.getTweet());
-                }
-            }
-        return SUCCESS;
+//       setUserEntities(userService.showAllUsers());
+         setOnlyUserNameWithIdsList(userService.showAllUsers());
+        showWeatherDetails();
+       return SUCCESS;
     }
 
     public String create(){
@@ -107,12 +107,24 @@ public class UserController extends ActionSupport implements ModelDriven{
         stringObjectMap
     }*/
 
-    public void setUserEntities(List<UserEntity> userEntities) {
+/*    public void setUserEntities(List<UserEntity> userEntities) {
         this.userEntities = userEntities;
     }
 
     public List<UserEntity> getUserEntities() {
         return userEntities;
+    }*/
+
+    public List<OnlyUserNameWithIds> getOnlyUserNameWithIdsList() {
+        return onlyUserNameWithIdsList;
     }
 
+    public void setOnlyUserNameWithIdsList(List<OnlyUserNameWithIds> onlyUserNameWithIdsList) {
+        this.onlyUserNameWithIdsList = onlyUserNameWithIdsList;
+    }
+
+    public String showWeatherDetails(){
+        Weather weather = new Weather();
+        return SUCCESS;
+     }
 }

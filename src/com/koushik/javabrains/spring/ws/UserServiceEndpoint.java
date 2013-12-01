@@ -4,6 +4,7 @@ import com.koushik.javabrains.entity.UserEntity;
 import com.koushik.javabrains.service.UserService;
 import com.koushik.javabrains.spring.ws.types.UserDetailsRequest;
 import com.koushik.javabrains.spring.ws.types.UserDetailsResponse;
+import com.koushik.javabrains.viewBean.OnlyUserNameWithIds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -30,8 +31,10 @@ public class UserServiceEndpoint {
     public @ResponsePayload
     UserDetailsResponse getUserNameById(@RequestPayload
                                         UserDetailsRequest userDetailsRequest ){
-        UserEntity userEntity =userService.getUserById(userDetailsRequest.getUserId().intValue());
-        String userName =userEntity.getUserName();
+//        UserEntity userEntity =userService.getUserById(userDetailsRequest.getUserId().intValue());
+        OnlyUserNameWithIds onlyUserNameWithIds=userService.getUserById(userDetailsRequest.getUserId().intValue());
+//        String userName =userEntity.getUserName();
+        String userName =onlyUserNameWithIds.getUserName();
         UserDetailsResponse userDetailsResponse = new UserDetailsResponse();
         userDetailsResponse.setUserName(userName);
         return userDetailsResponse;

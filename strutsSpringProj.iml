@@ -84,6 +84,10 @@
     <orderEntry type="library" name="org.springframework:spring-oxm:3.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="org.springframework.ws:spring-ws-core:2.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="org.apache.ws.commons.schema:XmlSchema:1.4.3" level="project" />
+    <orderEntry type="library" name="org.codehaus.jackson:jackson-mapper-asl:1.9.10" level="project" />
+    <orderEntry type="library" name="javax.xml.bind:jaxb-api:2.2.10" level="project" />
+    <orderEntry type="library" name="com.sun.jersey:jersey-client:1.9" level="project" />
+    <orderEntry type="library" name="com.jgeppert.struts2.jquery:struts2-jquery-plugin:2.4.0" level="project" />
   </component>
 </module>
 

@@ -29,16 +29,18 @@
     <definition name="/user_create.tiles" extends="baseLayout">
         <put-attribute name="title" value="create a user"/>
         <put-attribute name="body" value="/user/create.jsp"/>
+        <!--<put-attribute name="weather" value="/weather/show.jsp"/>-->
     </definition>
 
     <definition name="/user_index.tiles" extends="baseLayout">
         <put-attribute name="title" value="create a user"/>
         <put-attribute name="body" value="/user/index.jsp"/>
+        <!--<put-attribute name="weather" value="/weather/show.jsp"/>-->
     </definition>
 
     <definition name="/user_update.tiles" extends="baseLayout">
         <put-attribute name="title" value="create a user"/>
         <put-attribute name="body" value="/user/update.jsp"/>
+        <!--<put-attribute name="weather" value="/weather/show.jsp"/>-->
     </definition>
-
 </tiles-definitions>

@@ -2,6 +2,8 @@ package com.koushik.javabrains.entity;
 
 /*import org.hibernate.annotations.Entity;
 import org.hibernate.annotations.Table;*/
+import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
@@ -29,8 +31,8 @@ public class TweetEntity
     private String tweet;
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId", nullable = true)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "userId", nullable = false)
     private UserEntity userEntity;
 
     public int getTweetId() {

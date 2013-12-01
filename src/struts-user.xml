@@ -32,18 +32,16 @@
          <default-interceptor-ref name="myStack" />
 
         <action name="index.do" class="com.koushik.javabrains.action.UserController" method="index">
-            <!--<result name="success">/user/index.jsp</result>-->
             <result name="success" type="tiles">/user_index.tiles</result>
         </action>
 
+
         <action name="create.do">
-            <!--<result>/user/create.jsp</result>-->
             <result type="tiles">/user_create.tiles</result>
         </action>
 
          <action name="insert.do" class="com.koushik.javabrains.action.UserController" method="insert">
              <result name="success" type="redirectAction">index.do</result>
-             <!--<result name="input">/user/create.jsp</result>-->
              <result name="input" type="redirectAction">create.do</result>
         </action>
 
@@ -53,14 +51,15 @@
 
         <action name="processUpdate.do" class="com.koushik.javabrains.action.UserController" method="update">
             <result name="success" type="redirectAction">index.do</result>
-            <!--<result name="input" >/user/update.jsp</result>-->
             <result name="input" type="redirectAction">update.do</result>
         </action>
 
         <action name="delete.do" class="com.koushik.javabrains.action.UserController" method="delete" >
             <result name="success" type="redirectAction">index.do</result>
-            <!--<result name="success" type="redirectAction">index</result>-->
         </action>
+
+        <action name="getWeatherResult.do" method="showWeatherDetails"
+                class="com.koushik.javabrains.action.UserController"/>
      </package>
 
 </struts>

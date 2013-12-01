@@ -18,7 +18,8 @@
     </s:url>
 
 <table>
-        <s:iterator var="tweetEntity" value="tweetEntities">
+        <%--<s:iterator var="tweetEntity" value="onlyUserNameWithIdsList">--%>
+            <s:iterator var="tweetEntity" value="tweetEntities">
         <tbody>
              <td><s:property value="tweetId"/></td>
             <td><s:property value="tweet"/></td>

@@ -5,6 +5,7 @@ import com.koushik.javabrains.entity.UserEntity;
 import com.koushik.javabrains.model.TweetModel;
 import com.koushik.javabrains.service.TweetService;
 import com.koushik.javabrains.service.UserService;
+import com.koushik.javabrains.viewBean.OnlyUserNameWithIds;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import org.apache.log4j.Logger;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -28,6 +30,7 @@ public class TweetController extends ActionSupport implements ModelDriven{
     private Map session;
     private List<TweetEntity> tweetEntities;
     private List<UserEntity> userEntities;
+    private List<OnlyUserNameWithIds> onlyUserNameWithIdsList = new ArrayList<OnlyUserNameWithIds>();
     private String userSel;
 
     public void setTweetModel(TweetModel tweetModel) {
@@ -133,7 +136,8 @@ public class TweetController extends ActionSupport implements ModelDriven{
     }
     private void populateUserNamesForDropDownList(){
         logger.info("in populateUserNamesForDropDownList");
-        setUserEntities(getUserService().showAllUsers()) ;
+//        setUserEntities(getUserService().showAllUsers()) ;
+        setOnlyUserNameWithIdsList(getUserService().showAllUsers());
     }
 
     public List<UserEntity> getUserEntities() {
@@ -150,5 +154,13 @@ public class TweetController extends ActionSupport implements ModelDriven{
 
     public void setUserSel(String userSel) {
         this.userSel = userSel;
+    }
+
+    public List<OnlyUserNameWithIds> getOnlyUserNameWithIdsList() {
+        return onlyUserNameWithIdsList;
+    }
+
+    public void setOnlyUserNameWithIdsList(List<OnlyUserNameWithIds> onlyUserNameWithIdsList) {
+        this.onlyUserNameWithIdsList = onlyUserNameWithIdsList;
     }
 }

@@ -1,16 +1,19 @@
 package com.koushik.javabrains.service.impl;
 
 import com.koushik.javabrains.dao.UserDao;
-import com.koushik.javabrains.entity.TweetEntity;
 import com.koushik.javabrains.entity.UserEntity;
 import com.koushik.javabrains.model.UserModel;
 import com.koushik.javabrains.service.UserService;
+import com.koushik.javabrains.viewBean.OnlyUserNameWithIds;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by IntelliJ IDEA.
@@ -46,17 +49,35 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public List<UserEntity> showAllUsers() {
+    public List<OnlyUserNameWithIds> showAllUsers() {
         List<UserEntity> userEntityList = null;
+        List<UserEntity> userEntityList1 = new ArrayList<UserEntity>();
+        OnlyUserNameWithIds userNameWithIds = null;
+        List<OnlyUserNameWithIds> onlyUserNameWithIdsList = new ArrayList<OnlyUserNameWithIds>();
+        Set<OnlyUserNameWithIds> onlyUserNameWithIdsSet = new HashSet<OnlyUserNameWithIds>();
+        int userId;
+        String userName;
         try{
-                userEntityList = getUserDao().listUsers();
+            userEntityList = getUserDao().listUsers();
+            for (UserEntity userEntity: userEntityList) {
+                 userId = userEntity.getUserId();
+                 userName = userEntity.getUserName();
+                 userNameWithIds = new OnlyUserNameWithIds();
+                userNameWithIds.setUserId(userId);
+                userNameWithIds.setUserName(userName);
+                 onlyUserNameWithIdsSet.add(userNameWithIds);
+            }
+            onlyUserNameWithIdsList.addAll(onlyUserNameWithIdsSet);
         }
         catch (Exception e){
             logger.debug(e);
         }
-          return userEntityList ;
+/*        Set<UserEntity> userEntitySet = new HashSet<UserEntity>(userEntityList);
+         userEntityList1.addAll(userEntitySet);
+         return userEntityList1;*/
+//        return userEntityList ;
+        return onlyUserNameWithIdsList;
     }
-
     @Override
     @Transactional
     public void delete(UserModel userModel) {
@@ -74,18 +95,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public UserEntity getUserById(int userId){
-        return getUserDao().getUser(userId);
+    public OnlyUserNameWithIds getUserById(int userId){
+        OnlyUserNameWithIds userNameWithId = new OnlyUserNameWithIds();
+        String userName =getUserDao().getUser(userId).getUserName();
+        userNameWithId.setUserId(userId);
+        userNameWithId.setUserName(userName);
+        return userNameWithId;
+//        return getUserDao().getUser(userId);
     }
 }
-
-
-
-
-
-
-
-
-
-
-

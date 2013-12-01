@@ -20,7 +20,7 @@
         <s:textfield value="" label="tweet any thing" name="tweet"/>
 
         <s:select label="select an user" name="userSel"
-                      list="userEntities" listKey="userId"
+                      list="onlyUserNameWithIdsList" listKey="userId"
 
                       listValue="userName" headerKey="0" headerValue="user name"/>
 

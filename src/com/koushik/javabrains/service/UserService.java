@@ -3,6 +3,7 @@ package com.koushik.javabrains.service;
 import com.koushik.javabrains.dao.UserDao;
 import com.koushik.javabrains.entity.UserEntity;
 import com.koushik.javabrains.model.UserModel;
+import com.koushik.javabrains.viewBean.OnlyUserNameWithIds;
 
 import java.util.List;
 
@@ -20,11 +21,11 @@ public interface UserService {
 
     void insert(UserModel userModel);
 
-    List<UserEntity> showAllUsers();
+    List<OnlyUserNameWithIds> showAllUsers();
 
     void delete(UserModel userModel);
 
     void update(UserModel userModel);
 
-    UserEntity getUserById(int userId);
+    OnlyUserNameWithIds getUserById(int userId);
 }
