@@ -1,1 +1,5 @@
 StrutsSpringProj is created with struts2 as frontend mvc, spring framework is used as middle layer and spring jdbc is used to communicate with database.
+
+used jaxb for marshalling UserList object. By specifying in spring rest controller (UserController), @produces, we can control either xml or json output. created a web services client by consuming weather api using jersey restful client.
+
+
